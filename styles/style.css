@@ -1,41 +1,39 @@
-* {
-  margin:0;
-  padding:0;
-}
-html {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  background-color: white;
-  height: 100%;
-}
 body {
-  height: 100%;
   margin: 0;
 }
-#container {
-  /*保证footer是相对于co​​ntainer位置绝对定位*/
-  position:relative;
+
+.section {
+  position: relative;
   width: 100%;
-  min-height: 100%;
-  /*设置padding-bottom​​​值大于等于footer的height值，​​
-  ​以保证main的内容能够全部显示出​​​​来而不被footer遮盖；*/
-  padding-bottom: 50px;
-}
-header {
-  width: 100%;
-  height: 85px;
-  background: linear-gradient(135deg, #4466ce, #4dbdc1);
-}
-.main{
-  width: 100%;
-  background: orange;
-}
-footer {
-  width: 100%;
-  height: 50px;
-  /* footer的高度一定要是固定值*/
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  background: #31345e;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
+.section h1 {
+  text-align: center;
+  font-size: 6rem;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  opacity: 1;
+  color: white;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  filter: brightness(50%);
+}
